@@ -4,7 +4,7 @@ import unittest
 class NewvisitorTest(unittest.TestCase):    #Inherit unittest.Testcase
     def setUp(self):
         self.browser = webdriver.Firefox()
-        self.browser.implicity_wait(3)
+        self.browser.implicitly_wait(3)
 
     def tearDown(self):
         self.browser.quit()
@@ -14,7 +14,7 @@ class NewvisitorTest(unittest.TestCase):    #Inherit unittest.Testcase
         self.browser.get('http://localhost:8000')
 
         #user found that 'to-do' is the title of the website
-        self.assertIn('To-do', self.browser.title)
+        self.assertIn('To-Do', self.browser.title)
 
         #user is invited to  enter a to-do item
 
